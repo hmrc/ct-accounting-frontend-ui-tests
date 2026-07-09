@@ -2,7 +2,7 @@
 
 # ct-accounting-frontend-ui-tests
 
-<SERVICE_NAME> UI journey tests.
+CT ACCOUNTING FRONTEND UI journey tests.
 
 ## Pre-requisites
 
