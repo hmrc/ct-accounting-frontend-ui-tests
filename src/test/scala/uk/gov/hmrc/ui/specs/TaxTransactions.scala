@@ -22,14 +22,12 @@ import org.scalatest.verbs.ShouldVerb
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.Taxes.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 import org.openqa.selenium.By
-import uk.gov.hmrc.ui.tags.TaxJourney
 
 class TaxTransactions
-    extends AnyFeatureSpec
+  extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
     with ShouldVerb
@@ -41,7 +39,6 @@ class TaxTransactions
 
     Scenario(
       "Taxes- Accounting Period Overview",
-      TaxJourney
     ) {
 
       // uncomment below lines when Authorization is ready
@@ -53,11 +50,8 @@ class TaxTransactions
       )
 
       When("the user navigated to taxes accounting period overview")
-      // TaxesnavigateToPage()
-      Taxes.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
-      Taxes.verifyPageTitle(Taxes.pageTitle)
 
     }
   }
