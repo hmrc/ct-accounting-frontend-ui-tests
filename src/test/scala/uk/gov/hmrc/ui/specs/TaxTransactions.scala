@@ -53,7 +53,7 @@ class TaxTransactions
       )
 
       When("the user navigated to taxes accounting period overview")
-      // TaxnavigateToPage()
+      // TaxesnavigateToPage()
       Taxes.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
