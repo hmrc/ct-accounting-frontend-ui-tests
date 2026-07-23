@@ -54,10 +54,10 @@ class TaxTransactions
 
       When("the user navigated to taxes accounting period overview")
       // TaxnavigateToPage()
-      Adjustments.navigateToPage(
+      Taxes.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
-      Adjustments.verifyPageTitle(Adjustments.pageTitle)
+      Taxes.verifyPageTitle(Taxes.pageTitle)
 
     }
   }
