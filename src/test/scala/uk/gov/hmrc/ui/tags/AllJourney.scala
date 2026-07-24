@@ -17,5 +17,5 @@
 package uk.gov.hmrc.ui.tags
 import org.scalatest.Tag
 
-object AdjustmentJourney extends Tag("uk.gov.hmrc.ui.tags.AdjustmentJourney")
+object TaxJourney extends Tag("uk.gov.hmrc.ui.tags.TaxJourney")
 object wip extends Tag("uk.gov.hmrc.ui.tags.wip")

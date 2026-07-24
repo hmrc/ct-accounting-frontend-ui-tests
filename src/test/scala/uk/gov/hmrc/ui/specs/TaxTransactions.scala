@@ -22,13 +22,13 @@ import org.scalatest.verbs.ShouldVerb
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.Adjustments.*
+import uk.gov.hmrc.ui.pages.Taxes.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 import org.openqa.selenium.By
-import uk.gov.hmrc.ui.tags.AdjustmentJourney
+import uk.gov.hmrc.ui.tags.TaxJourney
 
-class AdjustmentTransactions
+class TaxTransactions
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
@@ -37,11 +37,11 @@ class AdjustmentTransactions
     with BeforeAndAfterEach
     with Browser
     with ScreenshotOnFailure {
-  Feature("Accounting Period Adjustments") {
+  Feature("Accounting Period Taxes") {
 
     Scenario(
-      "Adjustments- Accounting Period Overview",
-      AdjustmentJourney
+      "Taxes- Accounting Period Overview",
+      TaxJourney
     ) {
 
       // uncomment below lines when Authorization is ready
@@ -52,12 +52,12 @@ class AdjustmentTransactions
         returnId = Some("ct-accounting")
       )
 
-      When("the user navigated to adjustments accounting period overview")
-      // Adjustment.navigateToPage()
-      Adjustments.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/adjustments"
+      When("the user navigated to taxes accounting period overview")
+      // TaxesnavigateToPage()
+      Taxes.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
-      Adjustments.verifyPageTitle(Adjustments.pageTitle)
+      Taxes.verifyPageTitle(Taxes.pageTitle)
 
     }
   }
