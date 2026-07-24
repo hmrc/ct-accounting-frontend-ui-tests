@@ -14,9 +14,15 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.tags
-import org.scalatest.Tag
+package uk.gov.hmrc.ui.pages.accountingPeriod
 
-object AdjustmentJourney extends Tag("uk.gov.hmrc.ui.tags.AdjustmentJourney")
-object PenaltiesJourney extends Tag("uk.gov.hmrc.ui.tags.PenaltiesJourney")
-object wip extends Tag("uk.gov.hmrc.ui.tags.wip")
+import uk.gov.hmrc.ui.pages.BasePage
+
+object Penalties extends BasePage {
+
+  override def pageUrl: String = "ct-accounting/accounting-period-overview/penalties"
+
+  override def pageTitle: String =
+    "Penalties - Accounting period overview - GOV.UK"
+
+}
