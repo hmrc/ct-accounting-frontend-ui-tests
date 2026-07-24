@@ -14,15 +14,8 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.pages
+package uk.gov.hmrc.ui.tags
 
-import uk.gov.hmrc.ui.pages.BasePage
+import org.scalatest.Tag
 
-object Adjustments extends BasePage {
-
-  override def pageUrl: String = "ct-accounting/accounting-period-overview/adjustments"
-
-  override def pageTitle: String =
-    "Taxes - Accounting period overview - GOV.UK"
-
-}
+object TaxesJourney extends Tag("uk.gov.hmrc.ui.tags.TaxesJourney")
