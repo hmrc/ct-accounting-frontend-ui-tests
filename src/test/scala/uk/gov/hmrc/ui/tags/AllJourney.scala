@@ -19,4 +19,5 @@ import org.scalatest.Tag
 
 object AdjustmentJourney extends Tag("uk.gov.hmrc.ui.tags.AdjustmentJourney")
 object PenaltiesJourney extends Tag("uk.gov.hmrc.ui.tags.PenaltiesJourney")
+object TaxesJourney extends Tag("uk.gov.hmrc.ui.tags.TaxesJourney")
 object wip extends Tag("uk.gov.hmrc.ui.tags.wip")
