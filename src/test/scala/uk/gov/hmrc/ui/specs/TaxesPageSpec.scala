@@ -22,7 +22,6 @@ import org.scalatest.verbs.ShouldVerb
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.Taxes.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 import org.openqa.selenium.By
@@ -44,7 +43,6 @@ class TaxesPageSpec
       TaxesJourney
     ) {
 
-      // uncomment below lines when Authorization is ready
       Given("the user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
@@ -53,11 +51,11 @@ class TaxesPageSpec
       )
 
       When("the user navigated to taxes accounting period overview")
-      // TaxesnavigateToPage()
-      Taxes.navigateToPage(
+
+      TaxesPage.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
-      Taxes.verifyPageTitle(Taxes.pageTitle)
+      TaxesPage.verifyPageTitle(TaxesPage.pageTitle)
 
     }
   }
