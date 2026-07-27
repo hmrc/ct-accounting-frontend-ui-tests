@@ -23,6 +23,6 @@ object Adjustments extends BasePage {
   override def pageUrl: String = "ct-accounting/accounting-period-overview/adjustments"
 
   override def pageTitle: String =
-    "Taxes - Accounting period overview - GOV.UK"
+    "Adjustments – Accounting period overview - Accounting period overview - GOV.UK"
 
 }
