@@ -27,7 +27,7 @@ import uk.gov.hmrc.ui.tags.PenaltiesJourney
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
-class penalties
+class PenaltiesSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen

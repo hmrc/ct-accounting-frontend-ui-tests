@@ -30,7 +30,9 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.pages
+package uk.gov.hmrc.ui.pages.accountingPeriod
+
+import uk.gov.hmrc.ui.pages.BasePage
 
 object TaxesPage extends BasePage {
 

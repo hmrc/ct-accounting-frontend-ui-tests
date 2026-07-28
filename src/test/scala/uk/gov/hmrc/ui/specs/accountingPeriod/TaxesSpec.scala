@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.specs
+package uk.gov.hmrc.ui.specs.accountingPeriod
 
-import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import org.scalatest.featurespec.AnyFeatureSpec
 import org.scalatest.verbs.ShouldVerb
-import uk.gov.hmrc.ui.*
+import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
+import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.Adjustments.*
+import uk.gov.hmrc.ui.pages.accountingPeriod.TaxesPage
+import uk.gov.hmrc.ui.specs.BaseSpec
+import uk.gov.hmrc.ui.tags.TaxesJourney
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
-import org.openqa.selenium.By
-import uk.gov.hmrc.ui.tags.AdjustmentJourney
 
-class AdjustmentTransactions
+class TaxesSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
@@ -37,14 +37,13 @@ class AdjustmentTransactions
     with BeforeAndAfterEach
     with Browser
     with ScreenshotOnFailure {
-  Feature("Accounting Period Adjustments") {
+  Feature("Accounting Period Taxes") {
 
     Scenario(
-      "Adjustments- Accounting Period Overview",
-      AdjustmentJourney
+      "Taxes- Accounting Period Overview",
+      TaxesJourney
     ) {
 
-      // uncomment below lines when Authorization is ready
       Given("the user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
@@ -52,12 +51,12 @@ class AdjustmentTransactions
         returnId = Some("ct-accounting")
       )
 
-      When("the user navigated to adjustments accounting period overview")
-      // Adjustment.navigateToPage()
-      Adjustments.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/adjustments"
+      When("the user navigated to taxes accounting period overview")
+
+      TaxesPage.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
-      Adjustments.verifyPageTitle(Adjustments.pageTitle)
+      TaxesPage.verifyPageTitle(TaxesPage.pageTitle)
 
     }
   }
