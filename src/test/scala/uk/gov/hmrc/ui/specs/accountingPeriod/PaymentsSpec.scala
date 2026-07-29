@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.specs
+package uk.gov.hmrc.ui.specs.accountingPeriod
 
 import org.scalatest.featurespec.AnyFeatureSpec
 import org.scalatest.verbs.ShouldVerb
@@ -22,12 +22,13 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.accountingPeriod.Penalties
-import uk.gov.hmrc.ui.tags.PenaltiesJourney
+import uk.gov.hmrc.ui.pages.accountingPeriod.*
+import uk.gov.hmrc.ui.specs.BaseSpec
+import uk.gov.hmrc.ui.tags.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
-class penalties
+class PaymentsSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
@@ -36,11 +37,11 @@ class penalties
     with BeforeAndAfterEach
     with Browser
     with ScreenshotOnFailure {
-  Feature("Accounting Period Penalties") {
+  Feature("Accounting Period Payments") {
 
     Scenario(
-      "Penalties - Accounting Period Overview",
-      PenaltiesJourney
+      "Payments - Accounting Period Overview",
+      PaymentsJourney
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -50,11 +51,11 @@ class penalties
         returnId = Some("ct-accounting")
       )
 
-      When("the user navigated to penalties accounting period overview")
-      Penalties.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/penalties"
+      When("the user navigated to payments accounting period overview")
+      Payments.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/payments"
       )
-      Penalties.verifyPageTitle(Penalties.pageTitle)
+      Payments.verifyPageTitle(Payments.pageTitle)
 
     }
   }
