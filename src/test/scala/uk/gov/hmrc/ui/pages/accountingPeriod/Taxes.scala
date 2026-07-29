@@ -34,7 +34,7 @@ package uk.gov.hmrc.ui.pages.accountingPeriod
 
 import uk.gov.hmrc.ui.pages.BasePage
 
-object TaxesPage extends BasePage {
+object Taxes extends BasePage {
 
   override def pageUrl: String =
     "ct-accounting/accounting-period-overview/taxes"
