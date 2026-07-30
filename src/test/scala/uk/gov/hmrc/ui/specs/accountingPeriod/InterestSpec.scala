@@ -22,13 +22,13 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.accountingPeriod.Taxes
+import uk.gov.hmrc.ui.pages.accountingPeriod.Interest
 import uk.gov.hmrc.ui.specs.BaseSpec
-import uk.gov.hmrc.ui.tags.TaxesJourney
+import uk.gov.hmrc.ui.tags.{InterestJourney, TaxesJourney}
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
-class TaxesSpec
+class InterestSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
@@ -37,11 +37,11 @@ class TaxesSpec
     with BeforeAndAfterEach
     with Browser
     with ScreenshotOnFailure {
-  Feature("Accounting Period Taxes") {
+  Feature("Accounting Period Interest") {
 
     Scenario(
-      "Taxes - Accounting Period Overview",
-      TaxesJourney
+      "Interest - Accounting Period Overview",
+      InterestJourney
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -51,12 +51,12 @@ class TaxesSpec
         returnId = Some("ct-accounting")
       )
 
-      When("the user navigated to taxes accounting period overview")
+      When("the user navigated to interest accounting period overview")
 
-      Taxes.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
+      Interest.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/interest"
       )
-      Taxes.verifyPageTitle(Taxes.pageTitle)
+      Interest.verifyPageTitle(Interest.pageTitle)
 
     }
   }
