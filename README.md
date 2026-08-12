@@ -13,11 +13,14 @@ Start Mongo Docker container as follows:
 ```bash
 docker run --rm -d -p 27017:27017 --name mongo percona/percona-server-mongodb:6.0
 ```
-
-Start `<SERVICE_MANAGER_PROFILE>` services as follows:
+Start Oracle as follows:
 
 ```bash
-sm2 --start <SERVICE_MANAGER_PROFILE>
+docker start oraclexe-ct-core
+``
+
+```bash
+sm2 --start DASS_CTCORE_ALL
 ```
 
 ## Tests
