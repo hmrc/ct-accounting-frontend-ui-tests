@@ -168,7 +168,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
       logger.info(s"Successfully clicked the link with ID: $linkId")
     } catch {
       case e: Exception =>
-        logger.info(s"Failed to click the link with ID: $linkId. Error: ${e.getMessage}")
+        logger.error(s"Failed to click the link with ID: $linkId. Error: ${e.getMessage}")
     }
 
   def verifyPageTitle(expectedTitle: String): Unit = {
