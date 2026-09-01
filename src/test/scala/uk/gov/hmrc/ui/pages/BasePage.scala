@@ -165,10 +165,10 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
   def clickLinkById(linkId: String): Unit =
     try {
       click(By.id(linkId))
-      println(s"Successfully clicked the link with ID: $linkId")
+      logger.info(s"Successfully clicked the link with ID: $linkId")
     } catch {
       case e: Exception =>
-        println(s"Failed to click the link with ID: $linkId. Error: ${e.getMessage}")
+        logger.error(s"Failed to click the link with ID: $linkId. Error: ${e.getMessage}")
     }
 
   def verifyPageTitle(expectedTitle: String): Unit = {
@@ -177,7 +177,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
       driver.getTitle == expectedTitle,
       s"Page title mismatch! Expected: $expectedTitle, Actual: ${driver.getTitle}"
     )
-    println("Actual page title is: " + driver.getTitle)
+    logger.info("Actual page title is: " + driver.getTitle)
   }
 
   def waitForPageTitle(expectedTitle: String): Unit =
@@ -223,7 +223,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
       actualText == expectedText,
       s"Page text mismatch at index $index! Expected: $expectedText, Actual: $actualText"
     )
-    println("Actual page text is: " + actualText)
+    logger.info("Actual page text is: " + actualText)
   }
 
 }
