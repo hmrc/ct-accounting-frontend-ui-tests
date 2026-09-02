@@ -50,7 +50,7 @@ class InterestSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      //Uncomment below lines of code when bug DTR-7927 is fixed and interest page is available in the application
+      // Uncomment below lines of code when bug DTR-7927 is fixed and interest page is available in the application
       /*   When("the user navigated to interest accounting period overview")
 
       Interest.navigateToPage(
