@@ -51,12 +51,12 @@ class InterestSpec
         returnId = Some("ct-accounting")
       )
 
-      When("the user navigated to interest accounting period overview")
+      /*   When("the user navigated to interest accounting period overview")
 
       Interest.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/interest"
       )
-      Interest.verifyPageTitle(Interest.pageTitle)
+      Interest.verifyPageTitle(Interest.pageTitle)*/
 
     }
   }

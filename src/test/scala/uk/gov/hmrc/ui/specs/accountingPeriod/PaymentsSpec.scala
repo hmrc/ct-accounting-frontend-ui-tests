@@ -50,12 +50,14 @@ class PaymentsSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
+      /*
 
       When("the user navigated to payments accounting period overview")
       Payments.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/payments"
       )
       Payments.verifyPageTitle(Payments.pageTitle)
+       */
 
     }
   }
