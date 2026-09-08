@@ -83,13 +83,13 @@ class AccountingPeriodSpec
       )
       Interest.verifyPageTitle(Interest.pageTitle)*/
 
-      //User clicks on Late Payment Interest link
-      //User navigates back to interest accounting period overview page
-      //User clicks on Late Repayment Interest link
-      //User navigates back to interest accounting period overview page
-      //User clicks on Debit Interest link
-      //User navigates back to interest accounting period overview page
-      //User clicks on Credit Interest link
+      // User clicks on Late Payment Interest link
+      // User navigates back to interest accounting period overview page
+      // User clicks on Late Repayment Interest link
+      // User navigates back to interest accounting period overview page
+      // User clicks on Debit Interest link
+      // User navigates back to interest accounting period overview page
+      // User clicks on Credit Interest link
 
     }
 
