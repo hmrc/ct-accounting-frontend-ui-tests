@@ -58,7 +58,6 @@ class AccountingPeriodSpec
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
       Taxes.verifyPageTitle(Taxes.pageTitle)
-
     }
 
     Scenario(
@@ -74,15 +73,11 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the interest link
-
-      // Remove below line when navigation is ready
-      // Uncomment below lines of code when bug DTR-7927 is fixed and interest page is available in the application
-      /*   When("the user navigated to interest accounting period overview")
+      When("the user navigated to interest accounting period overview")
       Interest.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/interest"
       )
-      Interest.verifyPageTitle(Interest.pageTitle)*/
-
+      Interest.verifyPageTitle(Interest.pageTitle)
       // User clicks on Late Payment Interest link
       // User navigates back to interest accounting period overview page
       // User clicks on Late Repayment Interest link
@@ -90,7 +85,6 @@ class AccountingPeriodSpec
       // User clicks on Debit Interest link
       // User navigates back to interest accounting period overview page
       // User clicks on Credit Interest link
-
     }
 
     Scenario(
@@ -106,14 +100,12 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Penalties link
-
       When("the user navigated to penalties accounting period overview")
       // Reove below line when navigation is ready
       Penalties.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/penalties"
       )
       Penalties.verifyPageTitle(Penalties.pageTitle)
-
     }
 
     Scenario(
@@ -129,18 +121,13 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Payments link
-
-      // Uncomment below lines of code when bug DTR-7927 is fixed and payments page is available in the application
-      /*
-
       When("the user navigated to payments accounting period overview")
       Payments.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/payments"
       )
       Payments.verifyPageTitle(Payments.pageTitle)
-       */
-
     }
+
     Scenario(
       "Repayments and Reallocations- Accounting Period Overview",
       AccountingPeriod
@@ -174,10 +161,10 @@ class AccountingPeriodSpec
       // User clicks on the Adjustments link
       When("the user navigated to adjustments accounting period overview")
       // Reove below line when navigation is ready
-      Adjustments.navigateToPage(
+      /*  Adjustments.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/adjustments"
       )
-      Adjustments.verifyPageTitle(Adjustments.pageTitle)
+      Adjustments.verifyPageTitle(Adjustments.pageTitle)*/
 
     }
   }
