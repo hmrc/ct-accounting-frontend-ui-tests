@@ -17,9 +17,5 @@
 package uk.gov.hmrc.ui.tags
 import org.scalatest.Tag
 
-object AdjustmentJourney extends Tag("uk.gov.hmrc.ui.tags.AdjustmentJourney")
-object PaymentsJourney extends Tag("uk.gov.hmrc.ui.tags.PaymentsJourney")
-object PenaltiesJourney extends Tag("uk.gov.hmrc.ui.tags.PenaltiesJourney")
-object TaxesJourney extends Tag("uk.gov.hmrc.ui.tags.TaxesJourney")
-object InterestJourney extends Tag("uk.gov.hmrc.ui.tags.InterestJourney")
+object AccountingPeriods extends Tag("uk.gov.hmrc.ui.tags.AccountingPeriod")
 object wip extends Tag("uk.gov.hmrc.ui.tags.wip")
