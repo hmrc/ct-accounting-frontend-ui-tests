@@ -17,5 +17,5 @@
 package uk.gov.hmrc.ui.tags
 import org.scalatest.Tag
 
-object AccountingPeriods extends Tag("uk.gov.hmrc.ui.tags.AccountingPeriod")
+object AccountingPeriod extends Tag("uk.gov.hmrc.ui.tags.AccountingPeriod")
 object wip extends Tag("uk.gov.hmrc.ui.tags.wip")
