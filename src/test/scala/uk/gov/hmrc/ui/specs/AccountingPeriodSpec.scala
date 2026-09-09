@@ -53,7 +53,7 @@ class AccountingPeriodSpec
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the taxes link
       When("the user navigated to taxes accounting period overview")
-      // Reove below line when navigation is ready
+      // Remove below line when navigation is ready
       Taxes.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/taxes"
       )
@@ -101,7 +101,7 @@ class AccountingPeriodSpec
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Penalties link
       When("the user navigated to penalties accounting period overview")
-      // Reove below line when navigation is ready
+      // Remove below line when navigation is ready
       Penalties.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/penalties"
       )
@@ -160,7 +160,7 @@ class AccountingPeriodSpec
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Adjustments link
       When("the user navigated to adjustments accounting period overview")
-      // Reove below line when navigation is ready
+      // Remove below line when navigation is ready
       /*  Adjustments.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/adjustments"
       )
