@@ -160,11 +160,10 @@ class AccountingPeriodSpec
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Adjustments link
       When("the user navigated to adjustments accounting period overview")
-      // Remove below line when navigation is ready
-      /*  Adjustments.navigateToPage(
+      Adjustments.navigateToPage(
         "http://localhost:11200/ct-accounting/accounting-period-overview/adjustments"
       )
-      Adjustments.verifyPageTitle(Adjustments.pageTitle)*/
+      Adjustments.verifyPageTitle(Adjustments.pageTitle)
 
     }
   }
