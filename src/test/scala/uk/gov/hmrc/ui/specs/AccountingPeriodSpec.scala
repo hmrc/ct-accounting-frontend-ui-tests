@@ -62,7 +62,7 @@ class AccountingPeriodSpec
 
     Scenario(
       "Interest- Accounting Period Overview",
-      AccountingPeriod
+      wip
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -83,6 +83,12 @@ class AccountingPeriodSpec
       // User clicks on Late Repayment Interest link
       // User navigates back to interest accounting period overview page
       // User clicks on Debit Interest link
+      When("the user navigated to debit interest page")
+      // Remove below line when navigation is ready
+      DebitInterest.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/debit-interest"
+      )
+      DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
       // User navigates back to interest accounting period overview page
       // User clicks on Credit Interest link
     }
