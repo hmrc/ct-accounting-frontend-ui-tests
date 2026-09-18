@@ -79,6 +79,12 @@ class AccountingPeriodSpec
       )
       Interest.verifyPageTitle(Interest.pageTitle)
       // User clicks on Late Payment Interest link
+      When("the user navigated to late payment interest page")
+      // Remove below line when navigation is ready
+      LatePaymentInterest.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/late-payment-interest"
+      )
+      LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
       // User navigates back to interest accounting period overview page
       // User clicks on Late Repayment Interest link
       // User navigates back to interest accounting period overview page
