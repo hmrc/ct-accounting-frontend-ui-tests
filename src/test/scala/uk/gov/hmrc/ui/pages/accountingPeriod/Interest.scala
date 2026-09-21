@@ -41,4 +41,8 @@ object Interest extends BasePage {
   override def pageTitle: String =
     "Interest - Accounting period overview - GOV.UK"
 
+  val LatePaymentInterest: String = "/ct-accounting/accounting-period-overview/interest/late-payment-interest"
+
+  val DebitInterest: String = "/ct-accounting/accounting-period-overview/interest/debit-interest"
+
 }
