@@ -226,4 +226,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
     logger.info("Actual page text is: " + actualText)
   }
 
+  def clickLinkByHref(href: String): Unit =
+    driver.findElement(By.cssSelector(s"a[href='$href']")).click()
+
 }
