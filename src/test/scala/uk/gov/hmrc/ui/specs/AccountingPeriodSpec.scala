@@ -78,11 +78,6 @@ class AccountingPeriodSpec
         "http://localhost:11200/ct-accounting/accounting-period-overview/interest"
       )
       Interest.verifyPageTitle(Interest.pageTitle)
-      Then(
-        "the user navigated Repayment link through interest accounting period overview"
-      )
-      Interest.clickLinkByHref(Interest.RePaymentInterest)
-      RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
       // User clicks on Late Payment Interest link
       When("the user navigated to late payment interest page")
       // Remove below line when navigation is ready
@@ -90,17 +85,24 @@ class AccountingPeriodSpec
         "http://localhost:11200/ct-accounting/accounting-period-overview/interest/late-payment-interest"
       )
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
+
+      When(
+        "the user navigated Repayment link through interest accounting period overview"
+      )
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
+      Interest.clickLinkByHref(Interest.RePaymentInterest)
+      RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
+
       // User navigates back to interest accounting period overview page
-      // User clicks on Late Repayment Interest link
-      // User navigates back to interest accounting period overview page
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
+
       // User clicks on Debit Interest link
       When("the user navigated to debit interest page")
-      // Remove below line when navigation is ready
-      DebitInterest.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/debit-interest"
-      )
+      Interest.clickLinkByHref(Interest.DebitInterest)
       DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
+
       // User navigates back to interest accounting period overview page
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
       // User clicks on Credit Interest link
     }
 

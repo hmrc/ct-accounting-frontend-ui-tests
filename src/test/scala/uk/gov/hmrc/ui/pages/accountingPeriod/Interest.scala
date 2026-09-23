@@ -42,7 +42,8 @@ object Interest extends BasePage {
     "Interest - Accounting period overview - GOV.UK"
 
   val LatePaymentInterest: String = "/ct-accounting/accounting-period-overview/interest/late-payment-interest"
-  val RePaymentInterest: String   = "/ct-accounting/accounting-period-overview/interest/repayment-interest"
+
+  val RePaymentInterest: String = "/ct-accounting/accounting-period-overview/interest/repayment-interest"
 
   val DebitInterest: String = "/ct-accounting/accounting-period-overview/interest/debit-interest"
 
