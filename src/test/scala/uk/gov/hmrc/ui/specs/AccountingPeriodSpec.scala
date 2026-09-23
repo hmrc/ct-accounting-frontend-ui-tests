@@ -40,7 +40,7 @@ class AccountingPeriodSpec
   Feature("Accounting Periods Journey") {
 
     Scenario(
-      "Taxes- Accounting Period Overview",
+      "Taxes - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -61,7 +61,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Interest- Accounting Period Overview",
+      "Interest - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -71,7 +71,7 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
+      // User lands on Accounting Period ending 30 Sep 2025 page
       // User clicks on the interest link
       When("the user navigated to interest accounting period overview")
       Interest.navigateToPage(
@@ -80,27 +80,31 @@ class AccountingPeriodSpec
       Interest.verifyPageTitle(Interest.pageTitle)
       // User clicks on Late Payment Interest link
       When("the user navigated to late payment interest page")
-      // Remove below line when navigation is ready
-      LatePaymentInterest.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/late-payment-interest"
-      )
+      Interest.clickLinkByHref(Interest.LatePaymentInterest)
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
-      // User navigates back to interest accounting period overview page
-      // User clicks on Late Repayment Interest link
-      // User navigates back to interest accounting period overview page
+
+      When("User navigates back to interest accounting period overview page")
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+
+      When("the user navigated Repayment link through interest accounting period overview")
+      Interest.clickLinkByHref(Interest.RePaymentInterest)
+      RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
+
+      When("User navigates back to interest accounting period overview page")
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+
       // User clicks on Debit Interest link
       When("the user navigated to debit interest page")
-      // Remove below line when navigation is ready
-      DebitInterest.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/debit-interest"
-      )
+      Interest.clickLinkByHref(Interest.DebitInterest)
       DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
+
       // User navigates back to interest accounting period overview page
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       // User clicks on Credit Interest link
     }
 
     Scenario(
-      "Penalties- Accounting Period Overview",
+      "Penalties - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -121,7 +125,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Payments- Accounting Period Overview",
+      "Payments - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -141,7 +145,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Repayments and Reallocations- Accounting Period Overview",
+      "Repayments and Reallocations - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -159,7 +163,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Adjustments- Accounting Period Overview",
+      "Adjustments - Accounting Period Overview",
       AccountingPeriod
     ) {
 

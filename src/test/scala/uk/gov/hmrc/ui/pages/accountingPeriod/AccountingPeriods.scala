@@ -25,6 +25,6 @@ object AccountingPeriods extends BasePage {
   override def pageTitle: String =
     " "
 
-  val Interest: String = "/ct-accounting/accounting-period-overview/interest"
+  val InterestBreadCrumbsLink: String = "/ct-accounting/accounting-period-overview/interest"
 
 }
