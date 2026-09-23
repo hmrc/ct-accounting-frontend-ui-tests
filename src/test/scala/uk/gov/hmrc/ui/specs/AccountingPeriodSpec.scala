@@ -71,7 +71,7 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
+      // User lands on Accounting Period ending 30 Sep 2025 page
       // User clicks on the interest link
       When("the user navigated to interest accounting period overview")
       Interest.navigateToPage(
@@ -80,21 +80,22 @@ class AccountingPeriodSpec
       Interest.verifyPageTitle(Interest.pageTitle)
       // User clicks on Late Payment Interest link
       When("the user navigated to late payment interest page")
-      // Remove below line when navigation is ready
-      LatePaymentInterest.navigateToPage(
-        "http://localhost:11200/ct-accounting/accounting-period-overview/interest/late-payment-interest"
-      )
+      Interest.clickLinkByHref(Interest.LatePaymentInterest)
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
 
+      When("User navigates back to interest accounting period overview page")
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+
+      Interest.clickLinkByHref(Interest.RePaymentInterest)
       When(
         "the user navigated Repayment link through interest accounting period overview"
       )
-      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       Interest.clickLinkByHref(Interest.RePaymentInterest)
       RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
 
-      // User navigates back to interest accounting period overview page
-      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
+      When("User navigates back to interest accounting period overview page")
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
 
       // User clicks on Debit Interest link
       When("the user navigated to debit interest page")
@@ -102,7 +103,7 @@ class AccountingPeriodSpec
       DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
 
       // User navigates back to interest accounting period overview page
-      AccountingPeriods.clickLinkByHref(AccountingPeriods.Interest)
+      AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       // User clicks on Credit Interest link
     }
 
