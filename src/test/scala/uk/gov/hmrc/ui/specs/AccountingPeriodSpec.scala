@@ -87,9 +87,7 @@ class AccountingPeriodSpec
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
 
       Interest.clickLinkByHref(Interest.RePaymentInterest)
-      When(
-        "the user navigated Repayment link through interest accounting period overview"
-      )
+      When("the user navigated Repayment link through interest accounting period overview")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       Interest.clickLinkByHref(Interest.RePaymentInterest)
       RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
