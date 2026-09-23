@@ -40,7 +40,7 @@ class AccountingPeriodSpec
   Feature("Accounting Periods Journey") {
 
     Scenario(
-      "Taxes- Accounting Period Overview",
+      "Taxes - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -61,7 +61,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Interest- Accounting Period Overview",
+      "Interest - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -78,6 +78,11 @@ class AccountingPeriodSpec
         "http://localhost:11200/ct-accounting/accounting-period-overview/interest"
       )
       Interest.verifyPageTitle(Interest.pageTitle)
+      Then(
+        "the user navigated Repayment link through interest accounting period overview"
+      )
+      Interest.clickLinkByHref(Interest.RePaymentInterest)
+      RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
       // User clicks on Late Payment Interest link
       When("the user navigated to late payment interest page")
       // Remove below line when navigation is ready
@@ -100,7 +105,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Penalties- Accounting Period Overview",
+      "Penalties - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -121,7 +126,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Payments- Accounting Period Overview",
+      "Payments - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -141,7 +146,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Repayments and Reallocations- Accounting Period Overview",
+      "Repayments and Reallocations - Accounting Period Overview",
       AccountingPeriod
     ) {
 
@@ -159,7 +164,7 @@ class AccountingPeriodSpec
     }
 
     Scenario(
-      "Adjustments- Accounting Period Overview",
+      "Adjustments - Accounting Period Overview",
       AccountingPeriod
     ) {
 
