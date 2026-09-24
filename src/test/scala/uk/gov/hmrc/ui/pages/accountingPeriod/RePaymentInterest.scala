@@ -39,6 +39,6 @@ object RePaymentInterest extends BasePage {
   override def pageUrl: String = "accounting-period-overview/interest/repayment-interest"
 
   override def pageTitle: String =
-    "Repayment interest - Accounting period overview - GOV.UK"
+    "Repayment interest - Interest - Accounting period overview - GOV.UK"
 
 }
