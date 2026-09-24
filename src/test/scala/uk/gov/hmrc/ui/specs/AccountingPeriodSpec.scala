@@ -100,7 +100,11 @@ class AccountingPeriodSpec
 
       // User navigates back to interest accounting period overview page
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+
       // User clicks on Credit Interest link
+      When("the user navigated to credit interest page")
+      Interest.clickLinkByHref(Interest.CreditInterest)
+      CreditInterest.verifyPageTitle(CreditInterest.pageTitle)
     }
 
     Scenario(

@@ -34,19 +34,11 @@ package uk.gov.hmrc.ui.pages.accountingPeriod
 
 import uk.gov.hmrc.ui.pages.BasePage
 
-object Interest extends BasePage {
+object CreditInterest extends BasePage {
 
-  override def pageUrl: String = "ct-accounting/accounting-period-overview/interest"
+  override def pageUrl: String = "accounting-period-overview/interest/credit-interest"
 
   override def pageTitle: String =
-    "Interest - Accounting period overview - GOV.UK"
-
-  val LatePaymentInterest: String = "/ct-accounting/accounting-period-overview/interest/late-payment-interest"
-
-  val RePaymentInterest: String = "/ct-accounting/accounting-period-overview/interest/repayment-interest"
-
-  val DebitInterest: String = "/ct-accounting/accounting-period-overview/interest/debit-interest"
-
-  val CreditInterest: String = "/ct-accounting/accounting-period-overview/interest/credit-interest"
+    "Credit interest - Interest - Accounting period overview - GOV.UK"
 
 }
