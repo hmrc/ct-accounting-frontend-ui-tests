@@ -146,7 +146,7 @@ class AccountingPeriodSpec
 
     Scenario(
       "Repayments and Reallocations - Accounting Period Overview",
-      wip
+      AccountingPeriod
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -158,6 +158,7 @@ class AccountingPeriodSpec
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Repayments and Reallocations link
       Then("User navigates to the Repayments and Reallocations page")
+      //Remove below line once navigation is ready
       RepaymentsReallocations.navigateToPage(RepaymentsReallocations.pageUrl)
       RepaymentsReallocations.verifyPageTitle(RepaymentsReallocations.pageTitle)
 
