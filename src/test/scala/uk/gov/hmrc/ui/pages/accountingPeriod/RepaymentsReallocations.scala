@@ -25,6 +25,6 @@ object RepaymentsReallocations extends BasePage {
     "http://localhost:11200/ct-accounting/accounting-period-overview/repayments-and-reallocations"
 
   override def pageTitle: String =
-    "Repayments and reallocations – Accounting period overview – GOV.UK"
+    "Repayments and reallocations - Accounting period overview - GOV.UK"
 
 }
