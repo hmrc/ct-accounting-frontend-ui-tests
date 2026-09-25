@@ -161,8 +161,10 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Period ending 30 sept 2025 page
       // User clicks on the Repayments and Reallocations link
-      // User navigates to the Repayments and Reallocations page
-      // Verify page title of repayments and reallocation page
+      Then("User navigates to the Repayments and Reallocations page")
+      // Remove below line once navigation is ready
+      RepaymentsReallocations.navigateToPage(RepaymentsReallocations.pageUrl)
+      RepaymentsReallocations.verifyPageTitle(RepaymentsReallocations.pageTitle)
 
     }
 
