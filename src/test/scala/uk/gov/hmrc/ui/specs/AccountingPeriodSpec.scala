@@ -40,6 +40,24 @@ class AccountingPeriodSpec
   Feature("Accounting Periods Journey") {
 
     Scenario(
+      "Accounting Period Overview"
+    ) {
+      Given("the user logs in through the Authority Wizard page")
+      AuthWizard.login(
+        HASDIRECT,
+        Organisation,
+        returnId = Some("ct-accounting")
+      )
+      // User lands on Accounting Period ending 30 sept 2025 page
+      // User clicks on the accounting period link
+      When("the user navigated to accounting period overview")
+      AccountingPeriodOverview.navigateToPage(
+        "http://localhost:11200/ct-accounting/accounting-period-overview/"
+      )
+      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+    }
+
+    Scenario(
       "Taxes - Accounting Period Overview",
       AccountingPeriod
     ) {
