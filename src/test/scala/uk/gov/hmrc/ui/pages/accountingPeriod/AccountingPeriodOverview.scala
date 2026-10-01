@@ -20,10 +20,21 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object AccountingPeriodOverview extends BasePage {
 
-  override def pageUrl: String = " "
+  override def pageUrl: String = "http://localhost:11200/ct-accounting/accounting-period-overview"
 
-  override def pageTitle: String =  
-  "Accounting period overview - GOV.UK"
+  override def pageTitle: String = "Accounting period overview - GOV.UK"
 
-  val AccountingPeriodBreadCrumbsLink: String = "/ct-accounting/accounting-period-overview"
+  val TaxesLink: String = "/ct-accounting/accounting-period-overview/taxes"
+
+  val InterestLink: String = "/ct-accounting/accounting-period-overview/interest"
+
+  val PenaltiesLink: String = "/ct-accounting/accounting-period-overview/penalties"
+
+  val PaymentsLink: String = "/ct-accounting/accounting-period-overview/payments"
+
+  val RepaymentsReallocationsLink: String =
+    "/ct-accounting/accounting-period-overview/repayments-and-reallocations"
+
+  val AdjustmentsLink: String = "/ct-accounting/accounting-period-overview/adjustments"
+
 }
