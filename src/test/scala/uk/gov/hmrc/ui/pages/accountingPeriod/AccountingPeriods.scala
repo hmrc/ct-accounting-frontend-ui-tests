@@ -27,4 +27,5 @@ object AccountingPeriods extends BasePage {
 
   val InterestBreadCrumbsLink: String = "/ct-accounting/accounting-period-overview/interest"
 
+  val AccountingPeriodBreadCrumbsLink: String = "/ct-accounting/accounting-period-overview"
 }

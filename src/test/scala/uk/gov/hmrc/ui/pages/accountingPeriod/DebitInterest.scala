@@ -36,7 +36,7 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object DebitInterest extends BasePage {
 
-  override def pageUrl: String = "accounting-period-overview/interest/debit-interest"
+  override def pageUrl: String = "/ct-accounting/accounting-period-overview/interest/debit-interest"
 
   override def pageTitle: String =
     "Debit interest - Interest - Accounting period overview - GOV.UK"

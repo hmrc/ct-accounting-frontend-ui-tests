@@ -20,7 +20,7 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object Adjustments extends BasePage {
 
-  override def pageUrl: String = "ct-accounting/accounting-period-overview/adjustments"
+  override def pageUrl: String = "/ct-accounting/accounting-period-overview/adjustments"
 
   override def pageTitle: String =
     "Adjustments – Accounting period overview - Accounting period overview - GOV.UK"
