@@ -50,11 +50,13 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
-      // User clicks on the taxes link
-      When("the user navigated to taxes accounting period overview")
+      // User lands on Accounting Balance Page
+
+      When("the user navigated to accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on Taxes link and navigates to taxes page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.TaxesLink)
       Taxes.verifyPageTitle(Taxes.pageTitle)
     }
@@ -70,38 +72,41 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 Sep 2025 page
-      // User clicks on the interest link
-      When("the user navigated to interest accounting period overview")
+      // User lands on Accounting Balance Page
+
+      When("the user navigated to accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on Interest link and navigates to Interest page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.InterestLink)
       Interest.verifyPageTitle(Interest.pageTitle)
-      // User clicks on Late Payment Interest link
+
       When("the user navigated to late payment interest page")
       Interest.clickLinkByHref(Interest.LatePaymentInterest)
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
 
-      When("User navigates back to interest accounting period overview page")
+      When("User navigates back to interest accounting periods page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      When("the user navigated Repayment link through interest accounting period overview")
+      When("the user navigated RepaymentInterest page")
       Interest.clickLinkByHref(Interest.RePaymentInterest)
       RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
 
-      When("User navigates back to interest accounting period overview page")
+      When("User navigates back to interest accounting periods  page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      // User clicks on Debit Interest link
       When("the user navigated to debit interest page")
       Interest.clickLinkByHref(Interest.DebitInterest)
       DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
 
-      // User navigates back to interest accounting period overview page
+      When("User navigates back to interest accounting periods page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
+      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      // User clicks on Credit Interest link
-      When("the user navigated to credit interest page")
+      Then("the user navigated to credit interest page")
       Interest.clickLinkByHref(Interest.CreditInterest)
       CreditInterest.verifyPageTitle(CreditInterest.pageTitle)
     }
@@ -117,11 +122,12 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
-      // User clicks on the Penalties link
+      // User lands on Accounting Balance Page
       When("the user navigated to penalties accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on Penalties link and navigates to Penalties page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.PenaltiesLink)
       Penalties.verifyPageTitle(Penalties.pageTitle)
     }
@@ -137,11 +143,13 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
-      // User clicks on the Payments link
+      // User lands on Accounting Balance Page
+
       When("the user navigated to payments accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on Payments link and navigates to Payments page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.PaymentsLink)
       Payments.verifyPageTitle(Payments.pageTitle)
     }
@@ -157,11 +165,13 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
-      // User clicks on the Repayments and Reallocations link
+      // User lands on Accounting Balance Page
+
       Then("User navigates to the Repayments and Reallocations page")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on RepaymentsReallocations link and navigates to RepaymentsReallocations page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.RepaymentsReallocationsLink)
       RepaymentsReallocations.verifyPageTitle(RepaymentsReallocations.pageTitle)
 
@@ -178,11 +188,13 @@ class AccountingPeriodSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Accounting Period ending 30 sept 2025 page
-      // User clicks on the Adjustments link
+      // User lands on Accounting Balance Page
+
       When("the user navigated to adjustments accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+
+      Then("the user clicks on Adjustments link and navigates to Adjustments page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.AdjustmentsLink)
       Adjustments.verifyPageTitle(Adjustments.pageTitle)
 
