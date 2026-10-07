@@ -50,8 +50,8 @@ class GroupPaymentArragementSpec
         returnId = Some("ct-accounting")
       )
       // User lands on Group Payment Arrangement Page
-      // User clicks on Group Paymnet hyperlink
-      // User navigated to Group Paymnet page
+      // User clicks on Group Payment hyperlink
+      // User navigated to Group Payment page
       // User clicks on Group taxes hyperlink
       // User navigated to Group taxes page
       // User clicks on Payment allocated hypelink

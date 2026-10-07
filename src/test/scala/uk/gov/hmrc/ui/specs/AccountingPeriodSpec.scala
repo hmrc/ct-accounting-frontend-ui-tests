@@ -44,7 +44,7 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
@@ -52,11 +52,11 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Balance Page
 
-      When("the user navigated to accounting period overview")
+      When("The user navigated to accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on Taxes link and navigates to taxes page")
+      Then("The user clicks on Taxes link and navigates to taxes page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.TaxesLink)
       Taxes.verifyPageTitle(Taxes.pageTitle)
     }
@@ -66,7 +66,7 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
@@ -74,15 +74,15 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Balance Page
 
-      When("the user navigated to accounting period overview")
+      When("The user navigated to accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on Interest link and navigates to Interest page")
+      Then("The user clicks on Interest link and navigates to Interest page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.InterestLink)
       Interest.verifyPageTitle(Interest.pageTitle)
 
-      When("the user navigated to late payment interest page")
+      When("The user navigated to late payment interest page")
       Interest.clickLinkByHref(Interest.LatePaymentInterest)
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
 
@@ -90,7 +90,7 @@ class AccountingPeriodSpec
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      When("the user navigated RepaymentInterest page")
+      When("The user navigated RepaymentInterest page")
       Interest.clickLinkByHref(Interest.RePaymentInterest)
       RePaymentInterest.verifyPageTitle(RePaymentInterest.pageTitle)
 
@@ -98,7 +98,7 @@ class AccountingPeriodSpec
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      When("the user navigated to debit interest page")
+      When("The user navigated to debit interest page")
       Interest.clickLinkByHref(Interest.DebitInterest)
       DebitInterest.verifyPageTitle(DebitInterest.pageTitle)
 
@@ -106,7 +106,7 @@ class AccountingPeriodSpec
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user navigated to credit interest page")
+      Then("The user navigated to credit interest page")
       Interest.clickLinkByHref(Interest.CreditInterest)
       CreditInterest.verifyPageTitle(CreditInterest.pageTitle)
     }
@@ -116,18 +116,18 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
         returnId = Some("ct-accounting")
       )
       // User lands on Accounting Balance Page
-      When("the user navigated to penalties accounting period overview")
+      When("The user navigated to penalties accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on Penalties link and navigates to Penalties page")
+      Then("The user clicks on Penalties link and navigates to Penalties page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.PenaltiesLink)
       Penalties.verifyPageTitle(Penalties.pageTitle)
     }
@@ -137,7 +137,7 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
@@ -145,11 +145,11 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Balance Page
 
-      When("the user navigated to payments accounting period overview")
+      When("The user navigated to payments accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on Payments link and navigates to Payments page")
+      Then("The user clicks on Payments link and navigates to Payments page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.PaymentsLink)
       Payments.verifyPageTitle(Payments.pageTitle)
     }
@@ -159,7 +159,7 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
@@ -171,7 +171,7 @@ class AccountingPeriodSpec
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on RepaymentsReallocations link and navigates to RepaymentsReallocations page")
+      Then("The user clicks on RepaymentsReallocations link and navigates to RepaymentsReallocations page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.RepaymentsReallocationsLink)
       RepaymentsReallocations.verifyPageTitle(RepaymentsReallocations.pageTitle)
 
@@ -182,7 +182,7 @@ class AccountingPeriodSpec
       AccountingPeriod
     ) {
 
-      Given("the user logs in through the Authority Wizard page")
+      Given("The user logs in through the Authority Wizard page")
       AuthWizard.login(
         HASDIRECT,
         Organisation,
@@ -190,11 +190,11 @@ class AccountingPeriodSpec
       )
       // User lands on Accounting Balance Page
 
-      When("the user navigated to adjustments accounting period overview")
+      When("The user navigated to adjustments accounting period overview")
       AccountingPeriodOverview.navigateToPage(AccountingPeriodOverview.pageUrl)
       AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
 
-      Then("the user clicks on Adjustments link and navigates to Adjustments page")
+      Then("The user clicks on Adjustments link and navigates to Adjustments page")
       AccountingPeriodOverview.clickLinkByHref(AccountingPeriodOverview.AdjustmentsLink)
       Adjustments.verifyPageTitle(Adjustments.pageTitle)
 
