@@ -22,7 +22,6 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.accountingPeriod.*
 import uk.gov.hmrc.ui.specs.BaseSpec
 import uk.gov.hmrc.ui.tags.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
@@ -41,7 +40,7 @@ class GroupPaymentArragementSpec
 
     Scenario(
       "Group Payment Arrangement",
-      AccountingPeriod
+      gpa
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -51,14 +50,14 @@ class GroupPaymentArragementSpec
         returnId = Some("ct-accounting")
       )
       // User lands on Group Payment Arrangement Page
-      //User clicks on Group Paymnet hyperlink
-      //User navigated to Group Paymnet page
-      //User clicks on Group taxes hyperlink
-      //User navigated to Group taxes page
-      //User clicks on Payment allocated hypelink
-      //User navigated to Payment allocated page
+      // User clicks on Group Paymnet hyperlink
+      // User navigated to Group Paymnet page
+      // User clicks on Group taxes hyperlink
+      // User navigated to Group taxes page
+      // User clicks on Payment allocated hypelink
+      // User navigated to Payment allocated page
 
     }
-
+  }
 
 }
