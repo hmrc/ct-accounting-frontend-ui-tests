@@ -63,7 +63,7 @@ class AccountingPeriodSpec
 
     Scenario(
       "Interest - Accounting Period Overview",
-      AccountingPeriod
+      wip
     ) {
 
       Given("The user logs in through the Authority Wizard page")
@@ -86,9 +86,9 @@ class AccountingPeriodSpec
       Interest.clickLinkByHref(Interest.LatePaymentInterest)
       LatePaymentInterest.verifyPageTitle(LatePaymentInterest.pageTitle)
 
-      When("User navigates back to interest accounting periods page")
+      When("User navigates back to interest page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
-      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+      Interest.verifyPageTitle(Interest.pageTitle)
 
       When("The user navigated RepaymentInterest page")
       Interest.clickLinkByHref(Interest.RePaymentInterest)
@@ -96,7 +96,7 @@ class AccountingPeriodSpec
 
       When("User navigates back to interest accounting periods  page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
-      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+      Interest.verifyPageTitle(Interest.pageTitle)
 
       When("The user navigated to debit interest page")
       Interest.clickLinkByHref(Interest.DebitInterest)
@@ -104,7 +104,7 @@ class AccountingPeriodSpec
 
       When("User navigates back to interest accounting periods page")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.InterestBreadCrumbsLink)
-      AccountingPeriodOverview.verifyPageTitle(AccountingPeriodOverview.pageTitle)
+      Interest.verifyPageTitle(Interest.pageTitle)
 
       Then("The user navigated to credit interest page")
       Interest.clickLinkByHref(Interest.CreditInterest)
