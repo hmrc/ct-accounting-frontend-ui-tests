@@ -20,7 +20,7 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object AccountingPeriodOverview extends BasePage {
 
-  override def pageUrl: String = "http://localhost:11200/ct-accounting/accounting-period-overview"
+  override def pageUrl: String = "/ct-accounting/accounting-period-overview"
 
   override def pageTitle: String = "Accounting period overview - GOV.UK"
 
