@@ -16,13 +16,12 @@
 
 package uk.gov.hmrc.ui.pages.accountingPeriod
 
-import org.openqa.selenium.By
 import uk.gov.hmrc.ui.pages.BasePage
 
 object GroupPaymentArrangement extends BasePage {
 
   override def pageUrl: String = "http://localhost:11200/ct-accounting/group-payment-arrangement"
 
-  override def pageTitle: String = "Group payment arrangement - GOV.UK"
+  override def pageTitle: String = "Group Payment Arrangement - GOV.UK"
 
 }

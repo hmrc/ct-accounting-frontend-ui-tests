@@ -53,7 +53,7 @@ class GroupPaymentArragementSpec
       When("the user navigates to the Group Payment Arrangement page")
       GroupPaymentArrangement.navigateToPage(GroupPaymentArrangement.pageUrl)
 
-      Then("the Group Payment Arrangement overview is displayed")
+      Then("the Group Payment Arrangement Title is displayed as expected ")
       GroupPaymentArrangement.verifyPageTitle(GroupPaymentArrangement.pageTitle)
       // User lands on Group Payment Arrangement Page
       // User clicks on Group Payment hyperlink
