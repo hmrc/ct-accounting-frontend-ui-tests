@@ -54,7 +54,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       When("The user navigated to accounting period overview")
@@ -81,7 +81,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       When("The user navigated to accounting period overview")
@@ -135,7 +135,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       When("The user navigated to penalties accounting period overview")
@@ -161,7 +161,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       When("The user navigated to payments accounting period overview")
@@ -187,7 +187,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       Then("User navigates to the Accounting Period Overview page")
@@ -214,7 +214,7 @@ class AccountingPeriodSpec
       AccountingPeriods.navigateToPage(AccountingPeriods.pageUrl)
       AccountingPeriods.verifyPageTitle(AccountingPeriods.pageTitle)
 
-      And("The User clicks on an accounting period 03- Feb-2024")
+      And("The User clicks on an accounting period 03-Feb-2024")
       AccountingPeriods.clickLinkByHref(AccountingPeriods.AccountingPeriodEndingHyperlink)
 
       When("The user navigated to accounting period overview Page")

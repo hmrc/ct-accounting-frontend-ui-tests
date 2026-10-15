@@ -22,8 +22,8 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
+import uk.gov.hmrc.ui.pages.grpPaymentArrangement.GroupPaymentArrangement
 import uk.gov.hmrc.ui.specs.BaseSpec
-import uk.gov.hmrc.ui.tags.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
@@ -40,7 +40,7 @@ class GroupPaymentArragementSpec
 
     Scenario(
       "Group Payment Arrangement",
-      gpa
+      uk.gov.hmrc.ui.tags.gpa
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -49,15 +49,15 @@ class GroupPaymentArragementSpec
         Organisation,
         returnId = Some("ct-accounting")
       )
-      // User lands on Group Payment Arrangement Page
+      When("the user navigates to the Group Payment Arrangement page")
+      GroupPaymentArrangement.navigateToPage(GroupPaymentArrangement.pageUrl)
+      GroupPaymentArrangement.verifyPageTitle(GroupPaymentArrangement.pageTitle)
       // User clicks on Group Payment hyperlink
       // User navigated to Group Payment page
       // User clicks on Group taxes hyperlink
       // User navigated to Group taxes page
       // User clicks on Payment allocated hypelink
       // User navigated to Payment allocated page
-
     }
   }
-
 }
