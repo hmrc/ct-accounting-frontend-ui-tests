@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.pages.accountingPeriod
+package uk.gov.hmrc.ui.pages.grpPaymentArrangement
 
 import uk.gov.hmrc.ui.pages.BasePage
 
