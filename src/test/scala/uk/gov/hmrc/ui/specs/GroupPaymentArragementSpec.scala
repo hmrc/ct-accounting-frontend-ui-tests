@@ -57,8 +57,9 @@ class GroupPaymentArragementSpec
       GroupPayments.verifyPageTitle(GroupPayments.pageTitle)
       // User clicks on Group taxes hyperlink
       // User navigated to Group taxes page
-      // User clicks on Payment allocated hypelink
-      // User navigated to Payment allocated page
+      When("The user navigates to the payment allocated page")
+      PaymentAllocated.navigateToPage(PaymentAllocated.pageUrl)
+      PaymentAllocated.verifyPageTitle(PaymentAllocated.pageTitle)
     }
   }
 }
