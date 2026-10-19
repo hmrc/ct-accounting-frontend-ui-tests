@@ -20,7 +20,8 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object PaymentAllocated extends BasePage {
 
-  override def pageUrl: String = "http://localhost:11200/ct-accounting/group-payment-arrangement/group-taxes/payment-allocated"
+  override def pageUrl: String =
+    "http://localhost:11200/ct-accounting/group-payment-arrangement/group-taxes/payment-allocated"
 
   override def pageTitle: String = "Payment allocated - Group taxes - Group Payment Arrangement - GOV.UK"
 

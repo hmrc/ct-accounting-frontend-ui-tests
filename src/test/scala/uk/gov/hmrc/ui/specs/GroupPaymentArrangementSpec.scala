@@ -23,11 +23,11 @@ import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
 import uk.gov.hmrc.ui.tags.*
-import uk.gov.hmrc.ui.pages.grpPaymentArrangement.{GroupPaymentArrangement, PaymentAllocated}
+import uk.gov.hmrc.ui.pages.grpPaymentArrangement.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
-class GroupPaymentArragementSpec
+class GroupPaymentArrangementSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
