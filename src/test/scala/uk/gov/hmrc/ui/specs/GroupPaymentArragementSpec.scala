@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.ui.specs.accountingPeriod
+package uk.gov.hmrc.ui.specs
 
 import org.scalatest.featurespec.AnyFeatureSpec
 import org.scalatest.verbs.ShouldVerb
@@ -22,8 +22,8 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, GivenWhenThen}
 import uk.gov.hmrc.selenium.webdriver.{Browser, ScreenshotOnFailure}
 import uk.gov.hmrc.ui.*
 import uk.gov.hmrc.ui.pages.*
-import uk.gov.hmrc.ui.pages.grpPaymentArrangement.GroupPaymentArrangement
-import uk.gov.hmrc.ui.specs.BaseSpec
+import uk.gov.hmrc.ui.tags.*
+import uk.gov.hmrc.ui.pages.grpPaymentArrangement.{GroupPaymentArrangement, PaymentAllocated}
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
@@ -40,7 +40,7 @@ class GroupPaymentArragementSpec
 
     Scenario(
       "Group Payment Arrangement",
-      uk.gov.hmrc.ui.tags.gpa
+      gpa
     ) {
 
       Given("the user logs in through the Authority Wizard page")
@@ -56,8 +56,9 @@ class GroupPaymentArragementSpec
       // User navigated to Group Payment page
       // User clicks on Group taxes hyperlink
       // User navigated to Group taxes page
-      // User clicks on Payment allocated hypelink
-      // User navigated to Payment allocated page
+      When("The user navigates to the payment allocated page")
+      PaymentAllocated.navigateToPage(PaymentAllocated.pageUrl)
+      PaymentAllocated.verifyPageTitle(PaymentAllocated.pageTitle)
     }
   }
 }
