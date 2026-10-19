@@ -27,7 +27,7 @@ import uk.gov.hmrc.ui.pages.grpPaymentArrangement.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
-class GroupPaymentArragementSpec
+class GroupPaymentArrangementSpec
     extends AnyFeatureSpec
     with BaseSpec
     with GivenWhenThen
