@@ -20,8 +20,8 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object GroupPayments extends BasePage {
 
-  override def pageUrl: String = "http://localhost:11200/ct-accounting/group-payment-arrangement/group-GroupPayments"
+  override def pageUrl: String = "http://localhost:11200/ct-accounting/group-payment-arrangement/group-payments"
 
-  override def pageTitle: String = "Group Payment Arrangement - GOV.UK"
+  override def pageTitle: String = "Group payments - Group Payment Arrangement - GOV.UK"
 
 }
