@@ -53,12 +53,10 @@ class GroupPaymentArrangementSpec
       GroupPaymentArrangement.navigateToPage(GroupPaymentArrangement.pageUrl)
       GroupPaymentArrangement.verifyPageTitle(GroupPaymentArrangement.pageTitle)
       When("The user navigates to the Group Payment page")
+      // User clicks on Group Payment hyperlink
       GroupPayments.navigateToPage(GroupPayments.pageUrl)
       GroupPayments.verifyPageTitle(GroupPayments.pageTitle)
-      // User clicks on Group Payment hyperlink
-      // User navigated to Group Payment page
       // User clicks on Group taxes hyperlink
-      // User navigated to Group taxes page
       When("The user navigates to the payment allocated page")
       PaymentAllocated.navigateToPage(PaymentAllocated.pageUrl)
       PaymentAllocated.verifyPageTitle(PaymentAllocated.pageTitle)
