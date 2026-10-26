@@ -20,3 +20,4 @@ import org.scalatest.Tag
 object AccountingPeriod extends Tag("uk.gov.hmrc.ui.tags.AccountingPeriod")
 object gpa extends Tag("uk.gov.hmrc.ui.tags.gpa")
 object wip extends Tag("uk.gov.hmrc.ui.tags.wip")
+object pay extends Tag("uk.gov.hmrc.ui.tags.pay")
