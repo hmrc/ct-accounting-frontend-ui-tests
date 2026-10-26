@@ -36,7 +36,7 @@ class GroupPaymentArrangementSpec
     with BeforeAndAfterEach
     with Browser
     with ScreenshotOnFailure {
-  Feature("Group Payment Arragement Journey") {
+  Feature("Group Payment Arrangement Journey") {
 
     Scenario(
       "Group Payment Arrangement",
