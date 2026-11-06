@@ -77,19 +77,33 @@ object AuthWizard extends BasePage {
         Redirect
     }
 
-// TO BE UPDATED with respective values
-  def fillInputs(): this.type = {
-    driver.findElement(affinityGroup).sendKeys("toBeUpdated")
-    driver.findElement(enrolmentKey).sendKeys("toBeUpdated")
-    driver.findElement(enrolmentId).sendKeys("toBeUpdated")
-    driver.findElement(enrolmentValue).sendKeys("toBeUpdated")
+  def fillInputsOrganisation(): this.type = {
+    driver.findElement(affinityGroup).sendKeys("Organisation")
+    driver.findElement(enrolmentKey).sendKeys("IR-CT")
+    driver.findElement(enrolmentId).sendKeys("UTR")
+    driver.findElement(enrolmentValue).sendKeys("1234567890")
+    this
+  }
+
+  def fillInputsAgent(): this.type = {
+    driver.findElement(affinityGroup).sendKeys("Agent")
+    driver.findElement(enrolmentKey).sendKeys("IR-CT-AGENT")
+    driver.findElement(enrolmentId).sendKeys("IRAgentReference")
+    driver.findElement(enrolmentValue).sendKeys("N12A36")
     this
   }
 
   def login(@unused loginType: LoginTypes, @unused userType: UserTypes, returnId: Option[String] = None): Unit = {
     AuthWizard.navigateToPage(url)
     sendKeys(redirectUrl, buildRedirectUrl(HASDIRECT, Organisation, returnId))
-    fillInputs()
+    fillInputsOrganisation()
+    click(btnSubmit)
+  }
+
+  def loginAgent(@unused loginType: LoginTypes, @unused userType: UserTypes, returnId: Option[String] = None): Unit = {
+    AuthWizard.navigateToPage(url)
+    sendKeys(redirectUrl, buildRedirectUrl(HASDIRECT, Organisation, returnId))
+    fillInputsAgent()
     click(btnSubmit)
   }
 
