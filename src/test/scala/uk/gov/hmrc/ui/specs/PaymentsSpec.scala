@@ -53,6 +53,8 @@ class PaymentsSpec
       FindPayments.navigateToPage(FindPayments.pageUrl)
       FindPayments.verifyPageTitle(FindPayments.pageTitle)
       When("User clicks continue navigates to Payment search results page")
+      PaymentResults.navigateToPage(PaymentResults.pageUrl)
+      PaymentResults.verifyPageTitle(PaymentResults.pageTitle)
       // User clicks on payment search results hyperlink
       // User navigates to payment allocation detail page
       // User clicks on Accounting period ending hyper link
