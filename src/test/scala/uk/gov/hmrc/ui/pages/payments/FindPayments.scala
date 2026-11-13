@@ -18,10 +18,33 @@ package uk.gov.hmrc.ui.pages.payments
 
 import uk.gov.hmrc.ui.pages.BasePage
 
+import java.time.LocalDate
+
 object FindPayments extends BasePage {
 
   override def pageUrl: String = "http://localhost:11200/ct-accounting/find-your-payment"
 
   override def pageTitle: String = "Find your payment - GOV.UK"
+
+  def enterAmount(amount: String): Unit =
+    input(Locators.txtAmount, amount)
+
+  def selectDateRange(selectDateRangeStart: LocalDate, selectDateRangeEnd: LocalDate): Unit = {
+
+    def enterValue(field: String, value: String): Unit = {
+      clearById(field)
+      inputId(field, value)
+    }
+
+    enterValue("startDate-day", selectDateRangeStart.getDayOfMonth.toString)
+    enterValue("startDate-month", selectDateRangeStart.getMonthValue.toString)
+    enterValue("startDate-year", selectDateRangeStart.getYear.toString)
+    enterValue("endDate-day", selectDateRangeEnd.getDayOfMonth.toString)
+    enterValue("endDate-month", selectDateRangeEnd.getMonthValue.toString)
+    enterValue("endDate-year", selectDateRangeEnd.getYear.toString)
+  }
+
+  def findPaymentButton(): Unit =
+    saveAndContinue()
 
 }

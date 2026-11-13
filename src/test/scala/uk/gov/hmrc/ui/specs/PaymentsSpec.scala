@@ -27,6 +27,8 @@ import uk.gov.hmrc.ui.pages.payments.*
 import uk.gov.hmrc.ui.util.Users.LoginTypes.HASDIRECT
 import uk.gov.hmrc.ui.util.Users.UserTypes.Organisation
 
+import java.time.LocalDate
+
 class PaymentsSpec
     extends AnyFeatureSpec
     with BaseSpec
@@ -52,7 +54,12 @@ class PaymentsSpec
       When("the user navigates to the find a payment page")
       FindPayments.navigateToPage(FindPayments.pageUrl)
       FindPayments.verifyPageTitle(FindPayments.pageTitle)
-      When("User clicks continue navigates to Payment search results page")
+      And("User enters the amount and date fields")
+      FindPayments.enterAmount("38000")
+      FindPayments.selectDateRange(LocalDate.of(2022, 4, 6), LocalDate.of(2023, 6, 6))
+      And("User clicks on find payment button")
+      FindPayments.findPaymentButton()
+      When("User navigates to Payment search results page")
       PaymentResults.navigateToPage(PaymentResults.pageUrl)
       PaymentResults.verifyPageTitle(PaymentResults.pageTitle)
       // User clicks on payment search results hyperlink

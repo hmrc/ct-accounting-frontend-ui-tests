@@ -58,6 +58,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
     val txtAddressPostCode = By.ById("postcode")
     val lnkAddrManually    = "Enter the address manually"
     val cbxConfirm         = "#value_0"
+    val txtAmount: By      = By.ById("amount")
   }
 
   def pageUrl: String
@@ -134,6 +135,10 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
   def getCurrentUrlInBrowser: String = driver.getCurrentUrl
 
   def getPageTitle: String = driver.getTitle
+
+  def clearById(id: String): Unit = clear(By.id(id))
+
+  def inputId(id: String, value: String): Unit = input(By.id(id), value)
 
   /** Wait for page to load */
   def waitForPage(): Unit = fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("footer")))
