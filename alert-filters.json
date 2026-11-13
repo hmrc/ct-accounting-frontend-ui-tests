@@ -1,0 +1,44 @@
+{
+  "add": [
+    {
+      "reason": "This issue is related to the gg team - auth-login-stub doesn't have anti-csrf tokens any longer",
+      "contextId": 1,
+      "url": "http://localhost:9949/auth-login-stub/.*",
+      "ruleId": 10202,
+      "urlIsRegex": "true",
+      "newLevel": 0
+    },
+    {
+      "reason": "This url is not us, so we aren't responsible for the CORS header.",
+      "contextId": 1,
+      "url": "https://www.googletagmanager.com/.*",
+      "ruleId": 10098,
+      "urlIsRegex": "true",
+      "newLevel": -1
+    },
+    {
+      "reason": "The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'",
+      "contextId": 1,
+      "url": "https://www.googletagmanager.com/.*",
+      "ruleId": 10021,
+      "urlIsRegex": "true",
+      "newLevel": -1
+    },
+    {
+      "reason": "Missing Anti-clickjacking Header. This issue is related to google analytics and is outside our scope.",
+      "contextId": 1,
+      "url": "https://optimizationguide-pa.googleapis.com/.*",
+      "ruleId": 10020,
+      "newLevel": -1,
+      "urlIsRegex": "true"
+    },
+    {
+      "reason": "X-Content-Type-Options Header Missing. This issue is related to google analytics and is outside our scope.",
+      "contextId": 1,
+      "url": "https://optimizationguide-pa.googleapis.com/.*",
+      "ruleId": 10021,
+      "newLevel": -1,
+      "urlIsRegex": "true"
+    }
+  ]
+}

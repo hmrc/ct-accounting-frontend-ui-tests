@@ -60,7 +60,6 @@ class PaymentsSpec
       And("User clicks on find payment button")
       FindPayments.findPaymentButton()
       When("User navigates to Payment search results page")
-      PaymentResults.navigateToPage(PaymentResults.pageUrl)
       PaymentResults.verifyPageTitle(PaymentResults.pageTitle)
       // User clicks on payment search results hyperlink
       // User navigates to payment allocation detail page
