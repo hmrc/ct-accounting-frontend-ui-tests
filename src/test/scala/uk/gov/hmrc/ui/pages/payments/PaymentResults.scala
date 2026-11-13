@@ -16,6 +16,7 @@
 
 package uk.gov.hmrc.ui.pages.payments
 
+import org.openqa.selenium.By
 import uk.gov.hmrc.ui.pages.BasePage
 
 object PaymentResults extends BasePage {
@@ -23,5 +24,7 @@ object PaymentResults extends BasePage {
   override def pageUrl: String = "/ct-accounting/find-your-payment/payment-results"
 
   override def pageTitle: String = "Payment results - Find your payment - GOV.UK"
+
+  def clickPaymentSearchResult(): Unit = click(By.cssSelector("table tbody tr td:nth-child(2) a"))
 
 }
