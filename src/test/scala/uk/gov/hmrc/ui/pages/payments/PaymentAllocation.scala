@@ -20,7 +20,7 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object PaymentAllocation extends BasePage {
 
-  override def pageUrl: String = "/ct-accounting/find-your-payment/payment-results"
+  override def pageUrl: String = "/ct-accounting/find-your-payment/payment-results/payment-allocation"
 
   override def pageTitle: String = "Payment allocation - Payment results - Find your payment - GOV.UK"
 
