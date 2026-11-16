@@ -20,8 +20,12 @@ import uk.gov.hmrc.ui.pages.BasePage
 
 object PaymentResults extends BasePage {
 
+  val lnkFirstRowInTable = "table tbody tr td:nth-child(2) a"
+
   override def pageUrl: String = "/ct-accounting/find-your-payment/payment-results"
 
   override def pageTitle: String = "Payment results - Find your payment - GOV.UK"
+
+  def clickPaymentSearchResult(): Unit = clickByCssSelector(lnkFirstRowInTable)
 
 }

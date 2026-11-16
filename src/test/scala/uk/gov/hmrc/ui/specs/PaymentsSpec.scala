@@ -61,8 +61,10 @@ class PaymentsSpec
       FindPayments.findPaymentButton()
       When("User navigates to Payment search results page")
       PaymentResults.verifyPageTitle(PaymentResults.pageTitle)
-      // User clicks on payment search results hyperlink
-      // User navigates to payment allocation detail page
+      Then("User clicks on a payment search result hyperlink")
+      PaymentResults.clickPaymentSearchResult()
+      And("User navigates to the payment allocation detail page")
+      PaymentAllocation.verifyPageTitle(PaymentAllocation.pageTitle)
       // User clicks on Accounting period ending hyper link
       // User navigates to Accounting period page
     }

@@ -101,6 +101,8 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
     element.click()
   }
 
+  def clickByCssSelector(selector: String): Unit = click(By.cssSelector(selector))
+
   /** Generic clear method */
   def clear(selector: By): Unit = {
     val element = waitForVisibilityOfElement(selector)
