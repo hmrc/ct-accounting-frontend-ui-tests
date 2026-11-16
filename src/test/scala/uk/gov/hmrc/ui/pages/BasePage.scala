@@ -50,6 +50,7 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
     val paragraphText      = By.ByClassName("govuk-body")
     val txtBannerTitle     = "#govuk-notification-banner-title"
     val lnkRemoveFile      = "dd[class='govuk-summary-list__actions'] a[class='govuk-link']"
+    val lnkFirstRowInTable = "table tbody tr td:nth-child(2) a"
     val txtMonth: By       = By.ById("value.month")
     val txtYear: By        = By.ById("value.year")
     val txtPostCode: By    = By.ById("postcode")
@@ -100,6 +101,8 @@ trait BasePage extends PageObject with Eventually with Matchers with LazyLogging
     val element = waitForVisibilityOfElement(selector)
     element.click()
   }
+
+  def clickByCssSelector(selector: String): Unit = click(By.cssSelector(selector))
 
   /** Generic clear method */
   def clear(selector: By): Unit = {

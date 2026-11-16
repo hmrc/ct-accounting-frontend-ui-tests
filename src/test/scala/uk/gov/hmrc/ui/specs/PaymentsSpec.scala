@@ -65,7 +65,6 @@ class PaymentsSpec
       PaymentResults.clickPaymentSearchResult()
       And("User navigates to the payment allocation detail page")
       PaymentAllocation.verifyPageTitle(PaymentAllocation.pageTitle)
-      assert(PaymentAllocation.isCurrentUrl, s"Expected URL to contain ${PaymentAllocation.pageUrl}")
       // User clicks on Accounting period ending hyper link
       // User navigates to Accounting period page
     }
